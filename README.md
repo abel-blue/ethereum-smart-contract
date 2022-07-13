@@ -1,4 +1,4 @@
-<h1 align="center">Refund by Location Smart Contract</h1>
+<h1 align="center">Refund by location smart contract</h1>
 <div>
 <img src="https://img.shields.io/badge/OS-linux%20%7C%20windows-blue??style=flat&logo=Linux&logoColor=b0c0c0&labelColor=363D44" alt="Operating systems"/>
 <a href="https://github.com/Abel-Blue/refund-smart-contract/network/members"><img src="https://img.shields.io/github/forks/Abel-Blue/refund-smart-contract" alt="Forks Badge"/></a>
