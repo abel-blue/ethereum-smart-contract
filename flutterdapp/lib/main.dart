@@ -49,52 +49,53 @@ class MyHomePage extends StatefulWidget {
 // 
 
 class _MyHomePageState extends State<MyHomePage> {
-final TextEditingController _passwordController = TextEditingController();
-int _value = 1;
-String error = '';
-@override
-Widget build(BuildContext context) {
-return Scaffold(
-body: Center(
-child: Column(
-mainAxisAlignment: MainAxisAlignment.center,
-children: <Widget>[
-const Text(
-"dApp\nGPS Tracker",
-style: TextStyle(
-fontSize: 50,
-color: Colors.indigo,
-),
-textAlign: TextAlign.center,
-),
-SizedBox(
-height: 20.0,
-),
-Padding(
-padding: const EdgeInsets.only(
-left: 50,
-right: 50,
-bottom: 10,
-),
-child: DropdownButton(
-value: _value,
-items: [
-DropdownMenuItem<int>(
-child: Text("Parent"),
-value: 1,
-),
-DropdownMenuItem(
-child: Text("Child"),
-value: 2,
-)
-],
-onChanged: (value) {
-setState(() {
-_value = value as int;
-});
-},
-),
-),
+  final TextEditingController _passwordController = TextEditingController();
+  int _value = 1;
+  String error = '';
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            const Text(
+              "dApp\nGPS Tracker",
+              style: TextStyle(
+                fontSize: 50,
+                color: Colors.indigo,
+              ),
+              textAlign: TextAlign.center,
+            ),
+            SizedBox(
+              height: 20.0,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(
+                left: 50,
+                right: 50,
+                bottom: 10,
+              ),
+              child: DropdownButton(
+                value: _value,
+                items: [
+                  DropdownMenuItem<int>(
+                    child: Text("Parent"),
+                    value: 1,
+                  ),
+                  DropdownMenuItem(
+                    child: Text("Child"),
+                    value: 2,
+                  )
+                ],
+                onChanged: (value) {
+                  setState(() {
+                    _value = value as int;
+                  });
+                },
+              ),
+            ),
 Padding(
 padding: const EdgeInsets.only(
 left: 50,
