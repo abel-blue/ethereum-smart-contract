@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:flutterdapp/ParentPage.dart';
 import 'package:flutterdapp/parentModel.dart';
 import 'package:flutterdapp/childModel.dart';
@@ -7,9 +8,19 @@ import 'package:flutterdapp/ChildPage.dart';
 
 var password;
 
-void main() {
+Future main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  FlutterNativeSplash.removeAfter(initialization);
   runApp(const MyApp());
 }
+
+Future initialization(BuildContext? context) async {
+  await Future.delayed(Duration(seconds: 5));
+}
+
+// void main() {
+//  runApp(const MyApp());
+// }
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -62,7 +73,7 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const Text(
-              "dApp\nGPS Tracker",
+              "GPS Tracker",
               style: TextStyle(
                 fontSize: 50,
                 color: Colors.indigo,
