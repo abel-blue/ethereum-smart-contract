@@ -28,7 +28,7 @@ class _ChildPageState extends State<ChildPage> {
     var listModel = Provider.of<childModel>(context);
     return Scaffold(
       appBar: AppBar(
-        title: Text("My Location"),
+        title: Text("Employee Location"),
       ),
       body: Center(
         child: Column(
@@ -38,13 +38,13 @@ class _ChildPageState extends State<ChildPage> {
               Icon(
                 Icons.location_on,
                 size: 46.0,
-                color: Colors.blue,
+                color: Color.fromARGB(255, 149, 33, 243),
               ),
               SizedBox(
                 height: 10.0,
               ),
               Text(
-                "Get User Location",
+                "Get Location",
                 style: TextStyle(fontSize: 26.0, fontWeight: FontWeight.bold),
               ),
               SizedBox(
@@ -59,7 +59,7 @@ class _ChildPageState extends State<ChildPage> {
                 height: 50,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(35.0),
-                  color: Colors.amber,
+                  color: Color.fromARGB(255, 205, 7, 255),
                 ),
                 child: MaterialButton(
                   onPressed: () async {
@@ -74,7 +74,11 @@ class _ChildPageState extends State<ChildPage> {
                       locationMessage = "Latitude: $lat_1\nLongitude: $lon_1";
                     });
                   },
-                  child: Text('Get Current Location'),
+                  child: Text('Get Current Location',
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: Color.fromARGB(255, 255, 255, 255),
+                      )),
                 ),
               ),
               SizedBox(
@@ -137,8 +141,8 @@ class _ChildPageState extends State<ChildPage> {
                     }
                   });
                 },
-                activeTrackColor: Colors.lightGreenAccent,
-                activeColor: Colors.green,
+                activeTrackColor: Color.fromARGB(255, 189, 7, 7),
+                activeColor: Color.fromARGB(255, 226, 11, 11),
               ),
               SizedBox(
                 height: 20.0,
@@ -152,7 +156,7 @@ class _ChildPageState extends State<ChildPage> {
                 height: 50,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(35.0),
-                  color: Colors.amber,
+                  color: Color.fromARGB(255, 35, 196, 20),
                 ),
                 child: MaterialButton(
                   onPressed: () async {
@@ -169,7 +173,11 @@ class _ChildPageState extends State<ChildPage> {
                       throw "Couldn't launch URL";
                     }
                   },
-                  child: Text('View in Maps'),
+                  child: Text('View in Maps',
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: Color.fromARGB(255, 255, 255, 255),
+                      )),
                 ),
               ),
             ]),

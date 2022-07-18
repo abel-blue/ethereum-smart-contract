@@ -27,7 +27,7 @@ class _ParentPageState extends State<ParentPage> {
                 height: 50,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(35.0),
-                  color: Colors.amber,
+                  color: Color.fromARGB(255, 151, 3, 236),
                 ),
                 child: MaterialButton(
                   onPressed: () {
@@ -41,7 +41,11 @@ class _ParentPageState extends State<ParentPage> {
                     });
                     Text(locationMessage);
                   },
-                  child: Text('View Child Location'),
+                  child: Text('View Employee Location',
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: Color.fromARGB(255, 255, 255, 255),
+                      )),
                 ),
               ),
               SizedBox(
@@ -49,7 +53,7 @@ class _ParentPageState extends State<ParentPage> {
               ),
               listModel.isLoading
                   ? Text(
-                      "Child Last known Location: \nNo Data",
+                      "Employee Last known Location: \nNo Data",
                       textAlign: TextAlign.center,
                     )
                   : Text(
@@ -64,7 +68,7 @@ class _ParentPageState extends State<ParentPage> {
                 height: 50,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(35.0),
-                  color: Colors.amber,
+                  color: Color.fromARGB(255, 223, 167, 0),
                 ),
                 child: MaterialButton(
                   onPressed: () async {
@@ -84,7 +88,11 @@ class _ParentPageState extends State<ParentPage> {
                       throw "Couldn't launch URL";
                     }
                   },
-                  child: Text('View in Maps'),
+                  child: Text('View in Maps',
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: Color.fromARGB(255, 255, 255, 255),
+                      )),
                 ),
               ),
             ]),
