@@ -31,8 +31,8 @@ class parentModel extends ChangeNotifier {
   }
 
   Future<void> getAbi() async {
-    _abi = await rootBundle.loadString("assets/abi.json");
-    _contractAddress = "0x21ee849b07b57144b99706cffa0c9abbe64a9cf7";
+    _abi = await rootBundle.loadString("../assets/abi.json");
+    _contractAddress = "0x4943030bce7e49dd13b4dd120c0fef7dde3c18a0";
 //print(_abi);
 //print(_contractAddress);
   }
