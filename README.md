@@ -45,9 +45,9 @@ To use MetaMask wallet:
 
 ## Infura
 
-    <p>The mobile application (or dApp) is linked to the smart contract using the Infura API. It serves as a Gateway and manages all requests made to the smart contract. An account must must be created in order to access the Infura API. To view the statistics of requests made to a smart contract, a project must first be built for this application.</p>
+<p>The mobile application (or dApp) is linked to the smart contract using the Infura API. It serves as a Gateway and manages all requests made to the smart contract. An account must must be created in order to access the Infura API. To view the statistics of requests made to a smart contract, a project must first be built for this application.</p>
 
-    ![ethr](images/infura.png)
+![ethr](images/infura.png)
 
 ## Flutter Mobile Application
 
