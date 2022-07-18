@@ -5,6 +5,8 @@ import 'package:flutterdapp/parentModel.dart';
 import 'package:flutterdapp/childModel.dart';
 import 'package:provider/provider.dart';
 import 'package:flutterdapp/ChildPage.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:dropdown_button2/dropdown_button2.dart';
 
 var password;
 
@@ -15,7 +17,7 @@ Future main() async {
 }
 
 Future initialization(BuildContext? context) async {
-  await Future.delayed(Duration(seconds: 5));
+  await Future.delayed(Duration(seconds: 6));
 }
 
 // void main() {
@@ -75,8 +77,10 @@ class _MyHomePageState extends State<MyHomePage> {
             const Text(
               "GPS Tracker",
               style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontStyle: FontStyle.italic,
                 fontSize: 50,
-                color: Colors.indigo,
+                color: Color.fromARGB(255, 92, 29, 240),
               ),
               textAlign: TextAlign.center,
             ),
@@ -89,15 +93,19 @@ class _MyHomePageState extends State<MyHomePage> {
                 right: 50,
                 bottom: 10,
               ),
+              // ###########################################################################
+
               child: DropdownButton(
+                dropdownColor: Color.fromARGB(255, 8, 255, 140),
+                iconEnabledColor: Color.fromARGB(255, 15, 194, 9),
                 value: _value,
                 items: [
                   DropdownMenuItem<int>(
-                    child: Text("Parent"),
+                    child: Text("Admin"),
                     value: 1,
                   ),
                   DropdownMenuItem(
-                    child: Text("Child"),
+                    child: Text("Employee"),
                     value: 2,
                   )
                 ],
@@ -107,6 +115,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   });
                 },
               ),
+              // ###########################################################################
             ),
             Padding(
               padding: const EdgeInsets.only(
@@ -124,16 +133,18 @@ class _MyHomePageState extends State<MyHomePage> {
                 cursorColor: Colors.black,
                 decoration: const InputDecoration(
                   hintText: 'Input Password',
-                  border: UnderlineInputBorder(
-                    borderSide: BorderSide(color: Colors.black),
-                  ),
-                  focusedBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(color: Colors.black),
-                  ),
+                  border: OutlineInputBorder(),
+                  labelText: "Password",
+                  // border: UnderlineInputBorder(
+                  //   borderSide: BorderSide(color: Colors.black),
+                  // ),
+                  // focusedBorder: UnderlineInputBorder(
+                  //   borderSide: BorderSide(color: Colors.black),
+                  // ),
                 ),
               ),
             ),
-            Text("(Password must be 16 Characters)"),
+            Text("(Password must be 8 Characters)"),
             SizedBox(
               height: 20.0,
             ),
@@ -142,18 +153,20 @@ class _MyHomePageState extends State<MyHomePage> {
               height: 50,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(35.0),
-                color: Colors.amber,
+                color: Color.fromARGB(255, 164, 16, 233),
               ),
               child: MaterialButton(
                 onPressed: () {
-                  if (_passwordController.text.length == 16) {
-                    if (_value == 1) {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const ParentPage(),
-                        ),
-                      );
+                  if (_passwordController.text.length >= 8) {
+                    if (_passwordController.text == "adminadmin") {
+                      if (_value == 1) {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const ParentPage(),
+                          ),
+                        );
+                      }
                     } else if (_value == 2) {
                       Navigator.push(
                         context,
@@ -170,11 +183,15 @@ class _MyHomePageState extends State<MyHomePage> {
                   } else {
                     setState(() {
                       error =
-                          "Invalid length: \nPlease input 16 character secret password";
+                          "Invalid length: \nPlease input 8 character secret password";
                     });
                   }
                 },
-                child: const Text('Login'),
+                child: const Text('Login',
+                    style: TextStyle(
+                      fontSize: 20,
+                      color: Color.fromARGB(255, 255, 255, 255),
+                    )),
               ),
             ),
             SizedBox(
