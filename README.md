@@ -79,7 +79,7 @@ flutter build apk --no-sound-null-safety
 flutter install
 ```
 
-### <a name='conda'></a>Run fultter App on debug mode
+### <a name='conda'></a>Run flutter App on debug mode
 
 - First connect your device using USB cable.
 
@@ -95,4 +95,4 @@ flutter run --no-sound-null-safety
 
 # <a name='license'></a>License
 
-[MIT-License](https://github.com/Abel-Blue/refund-smart-contract/blob/main/Licence)
+[License](https://github.com/Abel-Blue/refund-smart-contract/blob/main/Licence)
