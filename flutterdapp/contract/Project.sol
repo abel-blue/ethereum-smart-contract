@@ -1,4 +1,4 @@
-pragma solidity ^0.5.16;
+pragma solidity ^0.8.15;
 
 contract Project {
     string[2] coordinates = ["0.00", "0.00"];
