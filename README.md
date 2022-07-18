@@ -54,7 +54,7 @@ To use MetaMask wallet:
 <p>After installing the application in the mobile of Parent or Child, the user interface will look as
 shown below:</p>
 
-![ethr](images/ola.webm)
+![ethr](images/ola.gif)
 
 # <a name='Flutter App Installation guide'></a>Flutter App Installation guide
 
