@@ -51,7 +51,7 @@ To use MetaMask wallet:
 
 ## Flutter Mobile Application
 
-<p>After installing the application on the mobile device of the employee, the user interface will look as shown below.:</p>
+<p>After installing the application on the mobile device of the employee, the user interface will look as shown below.</p>
 
 ![ethr](images/ola.gif)
 
