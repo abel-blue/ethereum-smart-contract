@@ -37,6 +37,7 @@ dependencies:
   web3dart: ^2.3.3 
   provider: ^6.0.1
   encrypt: ^5.0.1
+  flutter_native_splash: ^2.0.2+1
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -47,11 +48,11 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
-  flutter_native_splash: ^2.0.2+1
+  
 
 flutter_native_splash:
-  color: "#0080ff"
-  image: images/eagleeye.png
+  color: "#ffffff"
+  image: images/splash.png
 
 
   # The "flutter_lints" package below contains a set of recommended lints to
